@@ -19,6 +19,7 @@ npm-debug.log*
 results/*.json
 results/*.html
 !results/.gitkeep
+!results/attack-report.json
 
 # Sandbox (keep structure, ignore content)
 /tmp/mcp-demo-sandbox/*
