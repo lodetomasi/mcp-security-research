@@ -40,5 +40,8 @@
     "educational"
   ],
   "author": "Security Research Demo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/server-filesystem": "^2025.8.21"
+  }
 }
