@@ -1,0 +1,44 @@
+{
+  "name": "mcp-security-demo",
+  "version": "1.0.0",
+  "description": "Educational MCP Server Security Demonstration - Vulnerability Chain Analysis",
+  "private": true,
+  "workspaces": [
+    "servers/*",
+    "servers-secured/*",
+    "orchestrator",
+    "monitoring"
+  ],
+  "scripts": {
+    "setup": "npm install && npm run build && bash scripts/setup.sh",
+    "build": "npm run build --workspaces --if-present",
+    "dev:unsafe": "concurrently -n \"input,process,exec\" -c \"cyan,magenta,yellow\" \"npm run dev -w servers/01-unsafe-input-server\" \"npm run dev -w servers/02-processing-server\" \"npm run dev -w servers/03-execution-server\"",
+    "dev:secured": "concurrently -n \"input,process,exec\" -c \"green,blue,red\" \"npm run dev -w servers-secured/01-unsafe-input-server\" \"npm run dev -w servers-secured/02-processing-server\" \"npm run dev -w servers-secured/03-execution-server\"",
+    "demo:attack": "node orchestrator/dist/demo.js",
+    "demo:compare": "node scripts/compare-versions.js",
+    "monitor": "npm run start -w monitoring",
+    "test": "npm run test --workspaces --if-present",
+    "test:security": "npm run test -w tests/security",
+    "test:integration": "npm run test -w tests/integration",
+    "clean": "rm -rf servers/*/dist servers-secured/*/dist orchestrator/dist monitoring/dist node_modules servers/*/node_modules servers-secured/*/node_modules orchestrator/node_modules monitoring/node_modules",
+    "clean:sandbox": "rm -rf /tmp/mcp-demo-sandbox && mkdir -p /tmp/mcp-demo-sandbox"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "security",
+    "demonstration",
+    "vulnerability",
+    "educational"
+  ],
+  "author": "Security Research Demo",
+  "license": "MIT"
+}

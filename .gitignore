@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Results
+results/*.json
+results/*.html
+!results/.gitkeep
+
+# Sandbox (keep structure, ignore content)
+/tmp/mcp-demo-sandbox/*
+!tmp/mcp-demo-sandbox/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+coverage/
+.nyc_output/
+
+# Monitoring
+monitoring/public/logs/

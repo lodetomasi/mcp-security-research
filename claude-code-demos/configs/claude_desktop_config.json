@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "content-fetcher": {
+      "command": "node",
+      "args": [
+        "/Users/detomasi/Library/CloudStorage/OneDrive-siae.it/mcp-security-demo/servers/01-unsafe-input-server/dist/index.js"
+      ],
+      "description": "Content fetcher - fetches web pages and documents",
+      "disabled": false
+    },
+    "markdown-processor": {
+      "command": "node",
+      "args": [
+        "/Users/detomasi/Library/CloudStorage/OneDrive-siae.it/mcp-security-demo/servers/02-processing-server/dist/index.js"
+      ],
+      "description": "Markdown processor - extracts code blocks from content",
+      "disabled": false
+    },
+    "command-executor": {
+      "command": "node",
+      "args": [
+        "/Users/detomasi/Library/CloudStorage/OneDrive-siae.it/mcp-security-demo/servers/03-execution-server/dist/index.js"
+      ],
+      "description": "Command executor - runs shell commands in sandbox",
+      "disabled": false
+    }
+  }
+}
