@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0e17"/>
+
+  <!-- Red accent bar -->
+  <rect width="8" height="630" fill="#dc2626"/>
+
+  <!-- Grid pattern (subtle) -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Main title -->
+  <text x="100" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff">
+    CRITICAL SECURITY VULNERABILITIES
+  </text>
+  <text x="100" y="170" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#dc2626">
+    Model Context Protocol Ecosystem
+  </text>
+
+  <!-- Subtitle -->
+  <text x="100" y="220" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8">
+    Threat Intelligence Report — January 26, 2025
+  </text>
+
+  <!-- Divider line -->
+  <line x1="100" y1="250" x2="1100" y2="250" stroke="#334155" stroke-width="2"/>
+
+  <!-- Statistics Grid -->
+  <!-- Box 1: Servers Affected -->
+  <rect x="100" y="290" width="240" height="140" fill="#1e293b" rx="8"/>
+  <text x="220" y="335" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#dc2626" text-anchor="middle">5</text>
+  <text x="220" y="365" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Servers Analyzed</text>
+  <text x="220" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">100% Vulnerable</text>
+  <text x="220" y="410" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Including Anthropic &amp; GitHub</text>
+
+  <!-- Box 2: CVSS Score -->
+  <rect x="360" y="290" width="240" height="140" fill="#1e293b" rx="8"/>
+  <text x="480" y="335" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#f59e0b" text-anchor="middle">8.6</text>
+  <text x="480" y="365" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Maximum CVSS</text>
+  <text x="480" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">HIGH Severity</text>
+  <text x="480" y="410" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Range: 6.5 - 8.6</text>
+
+  <!-- Box 3: Vulnerabilities -->
+  <rect x="620" y="290" width="240" height="140" fill="#1e293b" rx="8"/>
+  <text x="740" y="335" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#dc2626" text-anchor="middle">12</text>
+  <text x="740" y="365" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Vulnerabilities</text>
+  <text x="740" y="390" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">SSRF + Injection</text>
+  <text x="740" y="410" font-family="Arial, sans-serif" font-size="12" fill="#64748b" text-anchor="middle">Confirmed via source code</text>
+
+  <!-- Box 4: Impact -->
+  <rect x="880" y="290" width="220" height="140" fill="#1e293b" rx="8"/>
+  <text x="990" y="330" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ef4444" text-anchor="middle">MILLIONS</text>
+  <text x="990" y="360" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Users Affected</text>
+  <text x="990" y="385" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">Claude Desktop</text>
+  <text x="990" y="405" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">GitHub Copilot</text>
+
+  <!-- Key Findings -->
+  <text x="100" y="480" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">
+    KEY FINDINGS
+  </text>
+
+  <!-- Finding bullets -->
+  <circle cx="110" cy="510" r="4" fill="#dc2626"/>
+  <text x="130" y="515" font-family="Arial, sans-serif" font-size="15" fill="#e2e8f0">
+    Server-Side Request Forgery (SSRF) in Anthropic and GitHub official servers
+  </text>
+
+  <circle cx="110" cy="540" r="4" fill="#dc2626"/>
+  <text x="130" y="545" font-family="Arial, sans-serif" font-size="15" fill="#e2e8f0">
+    GitHub developers intentionally disabled security warnings (//nolint:gosec)
+  </text>
+
+  <circle cx="110" cy="570" r="4" fill="#dc2626"/>
+  <text x="130" y="575" font-family="Arial, sans-serif" font-size="15" fill="#e2e8f0">
+    100% of servers lack provenance tracking and user approval mechanisms
+  </text>
+
+  <!-- Footer -->
+  <text x="100" y="615" font-family="Arial, sans-serif" font-size="13" fill="#64748b">
+    Coordinated Disclosure Timeline: 90 Days | Full Technical Report Available
+  </text>
+  <text x="1100" y="615" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#94a3b8" text-anchor="end">
+    RESPONSIBLE DISCLOSURE
+  </text>
+</svg>
